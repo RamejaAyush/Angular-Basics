@@ -3,3 +3,10 @@
   <button (click)="goToProjects()">Go to Projects</button>
   <input type="text" [(ngModel)]="username" />
 </div>
+
+<div *ngFor="let item of responseData.data">
+  <p>{{ item.id }}</p>
+  <img src="{{ item.avatar }}" alt="" />
+  <h1>{{ item.first_name }} {{ item.last_name }}</h1>
+  <h5>{{ item.email }}</h5>
+</div>
